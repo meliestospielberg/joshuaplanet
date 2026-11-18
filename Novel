@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua's Planet - Master Artbook</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            background-color: #010102;
+            color: #ffffff;
+            font-family: 'Space Mono', monospace;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% 0%, #0a0a12 0%, #010102 70%);
+            background-attachment: fixed;
+        }
+
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+        }
+
+
+        .art-wrapper {
+            width: 100%;
+            max-width: 1400px;
+            aspect-ratio: 21 / 9;
+            background-color: #0a0a0a;
+            margin-bottom: 3rem;
+            position: relative;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+
+        .art-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .caption {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            text-align: center;
+            color: #EAEAEA;
+            letter-spacing: 0.15em;
+            max-width: 900px;
+            line-height: 1.6;
+            min-height: 2.2rem;
+            text-transform: uppercase;
+        }
+
+
+        /* Cover Page Styling */
+        #cover-img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+            z-index: -1;
+            animation: slowZoom 30s infinite alternate ease-in-out;
+        }
+
+
+        @keyframes slowZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.08); }
+        }
+
+
+        .title-block h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(4rem, 10vw, 9rem);
+            letter-spacing: 0.2em;
+            text-align: center;
+            text-shadow: 0 0 30px rgba(0, 255, 255, 0.2), 0 10px 20px rgba(0,0,0,0.8);
+            text-transform: uppercase;
+        }
+
+
+        /* Credits & Scripture Styling */
+        .credits-text {
+            text-align: center;
+        }
+
+
+        .scripture-text {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            text-align: center;
+            line-height: 1.6;
+            max-width: 900px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+
+        .placeholder-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #555;
+            letter-spacing: 0.2em;
+            text-align: center;
+            padding: 2rem;
+            font-family: 'Space Mono', monospace;
+        }
+        
+        .page-number {
+            position: absolute;
+            bottom: 1rem;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.3);
+            letter-spacing: 0.2em;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- PAGE 1: COVER -->
+    <div class="page" id="page-1" style="overflow: hidden;">
+        <img id="cover-img" src="https://lh3.googleusercontent.com/d/123525WOGizg6EOWCqjNni529diMK1gcg" alt="Cover Art" />
+        <div class="title-block">
+            <h1>Joshua's Planet</h1>
+            <p style="text-align: center; letter-spacing: 8px; color: #00ffff; margin-top: 1rem; opacity: 0.8;">AN INTERACTIVE GRAPHIC NOVEL</p>
+        </div>
+        <div class="page-number">- 01 -</div>
+    </div>
+
+
+    <!-- PAGE 2: CREDITS -->
+    <div class="page" id="page-2">
+        <div class="credits-text">
+            <p style="letter-spacing: 0.3em; color: #888; text-transform: uppercase; font-size: 0.9rem;">Méliès to Spielberg Projects Presents</p>
+            <h2 style="font-family: 'Cinzel', serif; font-size: 4rem; margin: 2rem 0; letter-spacing: 0.1em; text-shadow: 0 0 20px rgba(0, 255, 255, 0.1);">JOSHUA'S PLANET</h2>
+            <p style="letter-spacing: 0.3em; color: #aaa; font-size: 1.1rem;">A GRAPHIC NOVEL BY RISHI RAVINDRA GOSWAMI</p>
+            <p style="letter-spacing: 0.2em; color: #666; margin-top: 4rem; font-size: 0.8rem;">© 2026 MTSP DIGITAL STUDIOS</p>
+        </div>
+        <div class="page-number">- 02 -</div>
+    </div>
+
+
+    <!-- PAGE 3: SCRIPTURE -->
+    <div class="page" id="page-3">
+        <p class="scripture-text">
+            "All of creation is the hallucination of a lonely, fractured cosmic being. We are symptoms of a divine mental illness."
+        </p>
+        <p style="margin-top: 4rem; letter-spacing: 4px; color: #A68B5B; font-size: 0.9rem;">— FROM THE BOOK OF JOSHUA - 934:456</p>
+        <div class="page-number">- 03 -</div>
+    </div>
+
+
+    <!-- PAGE 4 -->
+    <div class="page" id="page-4">
+        <div class="art-wrapper"><img src="https://lh3.googleusercontent.com/d/11LH6aIUpSOfBpxg7J_GVLs2SZ4RvTTw8" alt="Page 4 Art" /></div>
+        <p class="caption">They call this war. I call it... pruning.</p>
+        <div class="page-number">- 04 -</div>
+    </div>
+
+
+    <!-- PAGE 5 -->
+    <div class="page" id="page-5">
+        <div class="art-wrapper"><img src="https://lh3.googleusercontent.com/d/11Dly9CG31t6WqRLVq20Dxo46SwHJzMNz" alt="Page 5 Art" /></div>
+        <p class="caption">To find the absolute... one must first sit quietly in the ash of what was.</p>
+        <div class="page-number">- 05 -</div>
+    </div>
+
+
+    <!-- PAGE 6 -->
+    <div class="page" id="page-6">
+        <div class="art-wrapper"><img src="https://lh3.googleusercontent.com/d/1RzS46FWrlPuIqpr3sULuttmkLXZjYVr0" alt="Page 6 Art" /></div>
+        <p class="caption">I tore down their worlds so I could build my heaven. And it is beautiful.</p>
+        <div class="page-number">- 06 -</div>
+    </div>
+
+
+    <!-- PAGE 7 -->
+    <div class="page" id="page-7">
+        <div class="art-wrapper"><img src="https://lh3.googleusercontent.com/d/1drj_MqVVUBOOWuv3lqtw-2St6J9RNEzW" alt="Page 7 Art" /></div>
+        <p class="caption">The banquet of gods is served on the bones of mortals.</p>
+        <div class="page-number">- 07 -</div>
+    </div>
+
+
+    <!-- PAGE 8 -->
+    <div class="page" id="page-8">
+        <div class="art-wrapper"><img src="https://lh3.googleusercontent.com/d/1ehmdJqbNT1D1i3mEG5QVFui9vGq870Q0" alt="Page 8 Art" /></div>
+        <p class="caption">From here, I can watch the universe forget itself.</p>
+        <div class="page-number">- 08 -</div>
+    </div>
+
+
+    <!-- PAGE 9 -->
+    <div class="page" id="page-9">
+        <div class="art-wrapper"><img src="https://lh3.googleusercontent.com/d/1oX0pMcNzuMaesm1yAVViNuhbmyhY8nnp" alt="Page 9 Art" /></div>
+        <p class="caption">Let them pray. The King is resting.</p>
+        <div class="page-number">- 09 -</div>
+    </div>
+
+
+    <!-- PAGE 10 -->
+    <div class="page" id="page-10">
+        <div class="art-wrapper"><img src="https://lh3.googleusercontent.com/d/1c7cwqyxdu8ph0ROIdBlmWFyYF-VnreiR" alt="Page 10 Art" /></div>
+        <p class="caption">KHWAAB SPACE CRAFT - CRITICAL FAILURE - TRAJECTORY ALTERED</p>
+        <div class="page-number">- 10 -</div>
+    </div>
+
+
+    <!-- PAGE 11 -->
+    <div class="page" id="page-11">
+        <div class="art-wrapper"><img src="https://lh3.googleusercontent.com/d/1xWAA7RDEAs42-aUYIflid-sQn4ETPaLS" alt="Page 11 Art" /></div>
+        <p class="caption">VENYA - "WAS THAT A DREAM ?"</p>
+        <div class="page-number">- 11 -</div>
+    </div>
+
+
+    <!-- PAGE 12 -->
+    <div class="page" id="page-12">
+        <div class="art-wrapper"><img src="https://lh3.googleusercontent.com/d/1rAR_73mF0FfSHjVjxm9eahYUqrg0rLAi" alt="Page 12 Art" /></div>
+        <p class="caption">KHWAAB SPACE CRAFT - SPINNING OUT OF CONTROL</p>
+        <div class="page-number">- 12 -</div>
+    </div>
+
+
+    <!-- PAGE 13 -->
+    <div class="page" id="page-13">
+        <div class="art-wrapper">
+            <img src="https://lh3.googleusercontent.com/d/1cfLQzYirEDdEqD8uu0B8CPPqHTnirkeW" alt="Page 13 Art" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder-text" style="display: none;">[ ERROR LOADING PAGE 13 IMAGE ]</div>
+        </div>
+        <p class="caption">ALMUDENA - "WHAT THE HELL ?"</p>
+        <div class="page-number">- 13 -</div>
+    </div>
+
+
+    <!-- PAGE 14 -->
+    <div class="page" id="page-14">
+        <div class="art-wrapper">
+            <img src="https://lh3.googleusercontent.com/d/1PaIuubX3m7g3ZCdOCaLshdiL3egQXqIx" alt="Page 14 Art" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder-text" style="display: none;">[ ERROR LOADING PAGE 14 IMAGE ]</div>
+        </div>
+        <p class="caption">KHWAAB SPACE CRAFT - SPINNING STOPS. BUT THE NIGHTMARE BEGINS ?</p>
+        <div class="page-number">- 14 -</div>
+    </div>
+
+
+    <!-- PAGE 15 -->
+    <div class="page" id="page-15">
+        <div class="art-wrapper">
+            <img src="https://lh3.googleusercontent.com/d/1mZSPrIXLPCwQo0vAdhq9mgjMhL25N65Y" alt="Page 15 Art" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder-text" style="display: none;">[ ERROR LOADING PAGE 15 IMAGE ]</div>
+        </div>
+        <p class="caption">FEODEORA - "LUCE INCREDIBILE"</p>
+        <div class="page-number">- 15 -</div>
+    </div>
+
+
+    <!-- PAGE 16 -->
+    <div class="page" id="page-16">
+        <div class="art-wrapper">
+            <img src="https://lh3.googleusercontent.com/d/13dvAa6885jtM8hK4n9OmdzQQo-UA2tAv" alt="Page 16 Art" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder-text" style="display: none;">[ ERROR LOADING PAGE 16 IMAGE ]</div>
+        </div>
+        <p class="caption">EXTERIOR SHOT - BLUE PLANET AND IN COMPARISON A SMALL BLUE SUN</p>
+        <div class="page-number">- 16 -</div>
+    </div>
+
+
+    <!-- PAGE 18 (Page 17 skipped for narrative alignment) -->
+    <div class="page" id="page-18">
+        <div class="art-wrapper">
+            <img src="https://lh3.googleusercontent.com/d/1ziwa-DD7zk_j9VCCIIPJjUodZGJ7mvID" alt="Page 18 Art" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder-text" style="display: none;">[ ERROR LOADING PAGE 18 IMAGE ]</div>
+        </div>
+        <p class="caption">GRAVITY OF THE PLANET PULLING THE CRAFT</p>
+        <div class="page-number">- 18 -</div>
+    </div>
+
+
+    <!-- PAGE 19 -->
+    <div class="page" id="page-19">
+        <div class="art-wrapper">
+            <img src="https://lh3.googleusercontent.com/d/1U446VO8kEY6Af0NpgXMPZn6BvRu5s0fX" alt="Page 19 Art" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="placeholder-text" style="display: none;">[ ERROR LOADING PAGE 19 IMAGE ]</div>
+        </div>
+        <p class="caption">DEMON SEEKING THE SOULS</p>
+        <div class="page-number">- 19 -</div>
+    </div>
+
+
+    <!-- PAGE 20 (Placeholder for Ejection Pods) -->
+    <div class="page" id="page-20">
+        <div class="art-wrapper">
+            <div class="placeholder-text">[ AWAITING PAGE 20 ARTWORK - VERTICAL EJECTION PODS ]</div>
+        </div>
+        <p class="caption">GEARING UP FOR THE EJECTION PODS</p>
+        <div class="page-number">- 20 -</div>
+    </div>
+
+
+</body>
+</html>
+
